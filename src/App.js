@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SelectCity from "./SelectCity";
+import DisplayData from "./DisplayData"
+
+// Display a title in the center on the website
+// Display the available cities in a dropdown menu
+// Display the category buttons
+// Display table with fake data
+// No need to do a fetch at this time
+// Just make sure it works with the JSON from the Server.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="mt-3">City Mini Guide</h1>
+      <div className="container">
+        <SelectCity />
+        <div className="row ">
+          <button className="col-2  btn btn-primary mx-auto">Pharmacies</button>
+          <button className="col-2  btn btn-primary mx-auto">
+            schools & colleges
+          </button>
+          <button className="col-2  btn btn-primary mx-auto">hospitals</button>
+          <button className="col-2  btn btn-primary mx-auto">doctors</button>
+        </div>
+       <DisplayData />
+      </div>
     </div>
   );
 }
